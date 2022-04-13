@@ -88,6 +88,13 @@ let team = [
 		dept: "Engineering",
 		team: "Dev Ops",
 	},
+	{
+		name: "Kelvin Ndiragu",
+		role: "Dev Sec Ops",
+		img: "https://avatars.githubusercontent.com/u/97525319?v=4",
+		dept: "Engineering",
+		team: "Dev Ops",
+	},
 ];
 
 const handler = nc({
