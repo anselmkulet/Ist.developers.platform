@@ -18,7 +18,8 @@
     "next-connect": "^0.12.2",
     "nextjs-cors": "^2.1.1",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "shortid": "^2.2.16"
   },
   "devDependencies": {
     "eslint": "8.13.0",

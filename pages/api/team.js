@@ -1,5 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import NextCors from "nextjs-cors";
+import { generate } from "shortid";
 import nc from "next-connect";
 
 let team = [
@@ -97,6 +98,11 @@ let team = [
 	},
 ];
 
+const TEAM = team.map((i) => ({
+	uuid: generate(),
+	...i,
+}));
+
 const handler = nc({
 	onError: (err, req, res, next) => {
 		console.error(err.stack);
@@ -113,7 +119,7 @@ const handler = nc({
 			origin: "*",
 			optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 		});
-		res.status(200).json(team);
+		res.status(200).json(TEAM);
 	})
 	.post((req, res) => {
 		res.json({ hello: "world" });
