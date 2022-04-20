@@ -37,9 +37,9 @@ const handler = nc({
 		(user) => user.name === name && user.password === password
 	);
 	if (user) {
-		res.status(200).json(omitPassword(user));
+		res.status(200).json({ SUCCESS: true, data: omitPassword(user) });
 	} else {
-		res.status(404).json({ message: "Sorry not registered" });
+		res.status(404).json({ SUCCESS: false, error: "User NOT Found" });
 	}
 });
 
