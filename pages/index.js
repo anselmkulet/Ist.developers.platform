@@ -9,7 +9,7 @@ export default function Home() {
 				<HeaderSection />
 				<VStack
 					bg={"whiteAlpha.900"}
-					h={"calc(100vh - 100px)"}
+					minH={"calc(100vh - 100px)"}
 					justify={"center"}
 				>
 					<Text w={"80%"} p={4} fontWeight={500} fontSize={"2xl"}>
